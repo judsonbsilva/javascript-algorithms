@@ -5,6 +5,7 @@ var jshint = require('gulp-jshint');
 var jasmine = require('gulp-jasmine');
 var stylish = require('jshint-stylish');
 var jscs = require('gulp-jscs');
+var uglify = require('gulp-uglify');
 var isWin = /^win/.test(process.platform);
 
 gulp.task('jsdoc', shell.task([
@@ -30,4 +31,11 @@ gulp.task('jscs', function () {
     .pipe(jscs());
 });
 
-gulp.task('build', ['lint', 'jscs', 'test']);
+gulp.task('compress', function() {
+  return gulp.src('src/*/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['compress']);
+gulp.task('default', ['lint', 'jscs', 'test']);
