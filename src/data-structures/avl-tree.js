@@ -3,8 +3,7 @@
  * Property.
  *
  * @example
- * var avlTree = require('path-to-algorithms/src/data-structures'+
- * '/avl-tree');
+ * var avlTree = require('path-to-algorithms/src/data-structures/avl-tree');
  * var avl = new avlTree.AVLTree();
  *
  * avl.insert(2000);

@@ -1,8 +1,8 @@
 {
-  "name": "javascript-algorithms",
-  "version": "0.0.0",
+  "name": "js-algorithms",
+  "version": "1.0.0",
   "description": "Implementations of different computer science algorithms",
-  "main": "index.js",
+  "main": "./src/index.js",
   "directories": {
     "test": "test"
   },
